@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <>
-      <h2>Task #1</h2>
+      <h2>Task #01</h2>
       <div className="profile">
         <div className="description">
           <img src={avatar} alt="user avatar" className="avatar" />
