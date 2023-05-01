@@ -21,3 +21,8 @@ h2 {
   display: block;
   padding: 20px;
 }
+
+.subheader {
+  font-size: 22px;
+  font-weight: 300;
+}
