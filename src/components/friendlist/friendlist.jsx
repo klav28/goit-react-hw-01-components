@@ -10,9 +10,8 @@ const FriendList = ({ label, data }) => {
   );
 };
 
-// Statistics.propTypes = {
-//     label: PropTypes.string.isRequired,
-//     data: PropTypes.object.isRequired,  
-// };
+FriendList.propTypes = {
+     list: PropTypes.object.isRequired,  
+ };
 
 export default FriendList;
