@@ -1,8 +1,9 @@
 import React from 'react';
 import Wrapper from './friendlist.component';
 import PropTypes from 'prop-types';
+import { FriendListItem } from './friendlistitem';
 
-const FriendList = ({ friends }) => {
+export const FriendList = ({ friends }) => {
   return (
     <section>
       <h2>
@@ -11,15 +12,12 @@ const FriendList = ({ friends }) => {
       </h2>
       <Wrapper>
         <Wrapper.Ul>
-          {friends.map(el => {
+          {friends.map ( el => {
             return (
-              <Wrapper.Li key={el.id}>
-                <Wrapper.IsActive status={el.isOnline}></Wrapper.IsActive>
-                <Wrapper.Avatar src={el.avatar} />
-                <Wrapper.Name>{el.name}</Wrapper.Name>
-              </Wrapper.Li>
+              <FriendListItem id={el.id} avatar={el.avatar} name={el.name} isOnline={el.isOnline}></FriendListItem>
             );
-          })}
+          })
+        }
         </Wrapper.Ul>
       </Wrapper>
     </section>
@@ -29,5 +27,3 @@ const FriendList = ({ friends }) => {
 FriendList.propTypes = {
   friends: PropTypes.object.isRequired,
 };
-
-export default FriendList;

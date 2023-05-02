@@ -2,7 +2,7 @@ import React from 'react';
 import css from './statistics.module.css';
 import PropTypes from 'prop-types';
 
-const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats }) => {
   const getRandomHexColor = () => {
     return '#' + (Math.random().toString(8) + '000000').substring(2, 8);
   };
@@ -37,5 +37,3 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.object.isRequired,
 };
-
-export default Statistics;
