@@ -14,7 +14,7 @@ export const FriendList = ({ friends }) => {
         <Wrapper.Ul>
           {friends.map ( el => {
             return (
-              <FriendListItem id={el.id} avatar={el.avatar} name={el.name} isOnline={el.isOnline}></FriendListItem>
+              <FriendListItem key={el.id} avatar={el.avatar} name={el.name} isOnline={el.isOnline}></FriendListItem>
             );
           })
         }
@@ -25,5 +25,5 @@ export const FriendList = ({ friends }) => {
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.object.isRequired,
+  friends: PropTypes.array.isRequired,
 };
